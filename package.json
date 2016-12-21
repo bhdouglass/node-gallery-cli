@@ -1,0 +1,30 @@
+{
+  "name": "node-gallery-cli",
+  "version": "1.0.0",
+  "description": "Serve a simple photo gallery from the cli (using node-gallery)",
+  "main": "bin/node-gallery",
+  "scripts": {
+    "start": "node bin/node-gallery"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bhdouglass/node-gallery-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bhdouglass/node-gallery-cli/issues"
+  },
+  "homepage": "https://github.com/bhdouglass/node-gallery-cli#readme",
+  "bin": {
+    "node-gallery": "bin/node-gallery"
+  },
+  "keywords": [
+    "gallery",
+    "photo"
+  ],
+  "author": "Brian Douglass",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "minimist": "^1.2.0",
+    "node-gallery": "^1.1.0"
+  }
+}

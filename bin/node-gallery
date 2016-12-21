@@ -1,0 +1,34 @@
+#!/usr/bin/env node
+
+var express = require('express');
+var gallery = require('node-gallery');
+var minimist = require('minimist');
+
+var args = minimist(process.argv.slice(2), {
+    default: {
+        port: 3000,
+        ip: '127.0.0.1',
+        title: 'Photo Gallery',
+        dir: '.',
+    },
+    alias: {
+        p: 'port',
+        i: 'ip',
+        t: 'title',
+        d: 'dir',
+    }
+});
+
+var app = express();
+app.use('/gallery', gallery({
+    staticFiles : args.dir,
+    urlRoot : 'gallery',
+    title : args.title
+}));
+
+app.use('/', function(req, res) {
+    res.redirect('/gallery');
+});
+
+app.listen(args.port, args.ip);
+console.log('node-gallery serving photos from "' + args.dir + '" on http://' + args.ip + ':' + args.port);
