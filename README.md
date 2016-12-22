@@ -1,7 +1,8 @@
 # Node Gallery CLI
 
 A simple way to serve photos, similar to http-server.
-This is just a small wrapper around node-gallery, it uses node-gallery for all the heavy lifting.
+This is just a small wrapper around [node-gallery](https://github.com/cianclarke/node-gallery),
+it uses node-gallery for all the heavy lifting.
 
 ## Install
 
