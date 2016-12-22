@@ -1,6 +1,6 @@
 {
   "name": "node-gallery-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Serve a simple photo gallery from the cli (using node-gallery)",
   "main": "bin/node-gallery",
   "scripts": {
@@ -26,5 +26,6 @@
   "dependencies": {
     "minimist": "^1.2.0",
     "node-gallery": "^1.1.0"
-  }
+  },
+  "preferGlobal": true
 }
